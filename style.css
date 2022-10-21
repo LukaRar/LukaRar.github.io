@@ -1,73 +1,142 @@
 body {
-    background-image: url("picture1.jpg");
-    background-repeat: no-repeat;
-    background-color: black;
-    /* position: absolute;
-    margin: 0px;
-    overflow: hidden;
-    top: 0px;
-    bottom: 0px;
-    width: 100%; */
+  background-repeat: none;
+  background-color: black;
+  font-family: 'Barlow', sans-serif;
+  
+  
+  position: absolute;
+  
+  overflow: hidden;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
 }
-    
+
 header {
-    font-size: 70px;
+    font-size: 90px;
     text-transform: capitalize;
-    padding-left: 20%;
-}
-#hello {
-    color: white;
-    position: relative;
-    display: table;
-    margin: 100px;
-}
-#iam, #luka {
-    color: red;
-    position: relative;
-    display: table;
-    margin: 100px
-}
-#luka:hover, #iam:hover, #hello:hover {
+    padding-left: 15%;
+    
+   
+  }
+  /* not working */
+  header:hover {
     animation: mymove 0.5s forwards;
 }
 @keyframes mymove {
-    from {left: 0px;}
-    to {left: 30px;}
+  from {left: 0px;}
+  to {left: 30px;}
+}
+  
+/* -----------zoom in of the image-------------------- */
+.main--img {
+    position: absolute;
+    animation: zoom 1s;
+    object-fit: cover;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+  }
+  @keyframes zoom {
+    0% {
+    transform: scale(0.9, 0.9);
+    }
+    100% {
+    transform: scale(1, 1);
+    }
+  }
+    
+#iam, #luka, #hello {
+color: red;
+position: relative;
+display: table;
+margin: 70px;
+text-decoration: none;
+animation: fadein 2s forwards;
+cursor: pointer;
+}
+#hello {
+  color: white;
+}
+
+
+  @keyframes fadein {
+    from {bottom: -40px; opacity: 0;}
+    to {bottom: 0px; opacity: 1;}
   }
   
   /* ---------grey over effect on text------------- */
-  a::before {
-    background: rgb(83, 83, 83);
+  .greyOverText::before {
+    background: rgb(161, 157, 157);
     content: "";
     inset: 0;
     position: absolute;
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: right;
     transition: transform .3s ease-in-out;
     z-index: -1;
     opacity: 0.1;
   }
-  a:hover::before {
+  .greyOverText:hover::before {
     transform: scaleX(1);
     transform-origin: left;
   }
+
+
+  #aboutMe, #skills, #contacts {
+    color: white;
+    
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -11;
+    
+  }
+
+
+/* -----text animation on secondary pages---------- */
+  .textPopUp {
+    animation: fadein 2s forwards;
+    position: relative;
+  }
+
+  
+ 
+
+  .homepageBtn {
+    color: white;
+    position: relative;
+    display: table;
+    float: right;
+    margin: 2em;
+    text-decoration: none;
+    text-align: right;
+    cursor: pointer;
+    }
+
+    #aboutMe h1 {
+      
+      margin-top: 100px;
+      text-align: center;
+      font-size: 3em;
+    }
+    
+  
    
     
 
 
-  p {
-      color: white;
-      margin-top: 500px;
-    
-    
-    
-  }
+ 
   
-    #aboutMe {
-      color: white;
-      font-size: 30px;
-      margin-top: 500px;
-    }
+
+    
+      
     
     
 
