@@ -10,20 +10,97 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div  >
+    <div class="main-page" >
         <img  class="main--img"  src="Luka-BW.jpg">
-        <header>
-            <h2 class="greyOverText" id="hello" >Hello.</h2>
-            <h2 class="greyOverText" id="iam" >I am</h2>
-            <h2 class="greyOverText" id="luka" >Luka</h2>
+        <header class="header">
+            <a class="greyOverText" id="hello" href="#skills" >Hello.</a>
+            <a class="greyOverText" id="iam" href="#aboutMe" >I am</a>
+            <a class="greyOverText" id="luka" href="#contacts">Luka</a>
         </header>
     </div>
             
+    <section id="skills">
+        <div class="skills-div">
+            <div class="scroll-txt">
+                <ul class="tf">
+                    <li>repeat</li>
+                    <li>Develop</li>
+                    <li>design</li>
+                    <li>Sketch</li>
+                    <li>Imagine</li>
+                 </ul>
+             </div>
+             <h1 class="skills">SKILLS.<h1>
+         </div>
+         
+         <div  class="card-main">
+             <div class="card" id="img-html">
+                 <div class="card-content">
+                     <h2 class="card-title">HTML</h2>
+                     <p class="card-body">Creating HTML structure of the web page, inserting links, videos... Working with semantic elements. </p>
+                 </div>
+                     
+             </div>
+             <div class="card" id="img-css">
+                 <div class="card-content">
+                     <h2 class="card-title">Cascading Style Sheets</h2>
+                     <p class="card-body">CSS is the thing that interests me the most, im learning new things every day!</p>
+                 </div>
+             </div>
+             <div class="card" id="img-js">
+                 <div class="card-content">
+                     <h2 class="card-title">Java Script</h2>
+                     <p class="card-body">Intermediate level, with much more to be learned ahead. I have covered ES6 </p>
+                 </div>
+             </div>
+             <div class="card" id="img-react">
+                 <div class="card-content">
+                     <h2 class="card-title">React</h2>
+                     <p class="card-body">I understand the basics of React, currently doing React course on Udemy 	&#128516 </p>
+                 </div>
+             </div>
+             <div class="card" id="img-github">
+                 <div class="card-content">
+                     <h2 class="card-title">GitHub</h2>
+                     <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore at commodi consectetur culpa, quisquam</p>
+                 </div>
+             </div>
+             <div class="card" id="img-api">
+                 <div class="card-content">
+                     <h2 class="card-title">API</h2>
+                     <p class="card-body">I have used APIs before for some interesting projects like weather app and color generator.</p>
+                 </div>
+             </div>
+             <div class="card" id="img-rd">
+                 <div class="card-content">
+                     <h2 class="card-title">Responsive Design</h2>
+                     <p class="card-body">I know fundamentals like @Mediaquery. And also that this page is not responsive AT ALL.</p>
+                 </div>
+             </div>
+             <div class="card" id="img-ps">
+                 <div class="card-content">
+                     <h2 class="card-title">Photo Shop</h2>
+                     <p class="card-body">I am experienced Photoshop user, From modifying photos to building your own images.</p>
+                 </div>
+             </div>
+         </div>
+    </section>
+
+      
+        
+        
+
+
     <section id="aboutMe">
-        <h3  class="greyOverText homepageBtn"   onClick="history.go(0)">Back to HomePage</h3>
-        <h1 id="textEffect1">i am a self-taught <br> aspiring <br>front-end developer</h1>
-        <img class="picture-green" src="picture-green.jpg">
+        <div class="container-aboutMe">
+            <img class="picture-green" src="picture-green.jpg">
+           <div >
+               <h1 class="aboutMe-h1" >i am a self-taught <br> aspiring <br>front-end developer</h1>
+           </div>
+        </div>
+        
         <h2>About</h2>
         <div class="aboutMe-p">
         <p>Hi, I'm Luka. After getting my degree in Novi Sad in a field of 
@@ -59,85 +136,36 @@
         </p>
            </div>
     </section>
+       
+    <section id="contacts" >
+        <div class="contacts-img-div">
+            <img class="contacts-img" src="layered-peaks.svg">
+                <div class="contacts-div">
+                    <h1 >let's make <br> something great!</h1>
+                    <h2>feel free to contact me bellow</h2>
+                    <div class="info-phone">
+                        <img src="phone.svg" class="phone-icon">
+                        <p class="info-phone-p">065/33-111-46</p>
+                    </div>
+                    <div class="info-mail">
+                        <img src="mail.svg" class="mail-icon">
+                        <p class="info-mail-p">luqua00@gmail.com</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+    
+        <script src="index.js"></script>
+    </body>
+    </html>
+            
+
         
     
-    <section id="skills">
-        <h3  class="greyOverText homepageBtn"  onClick="history.go(0)">Back to HomePage</h3>
-        <div  class="card-main">
-            <div class="card" id="img-html">
-                <div class="card-content">
-                    <h2 class="card-title">HTML</h2>
-                    <p class="card-body">I have advance understanding of HTML and everything it offers. </p>
-                </div>
+        
+        
                     
-            </div>
-            <div class="card" id="img-css">
-                <div class="card-content">
-                    <h2 class="card-title">Cascading Style Sheets</h2>
-                    <p class="card-body">CSS is the thing that interests me the most, im learning new things every day!</p>
-                </div>
-            </div>
-            <div class="card" id="img-js">
-                <div class="card-content">
-                    <h2 class="card-title">Java Script</h2>
-                    <p class="card-body">Intermediate level, with much more to be learned ahead. I have covered ES6 </p>
-                </div>
-            </div>
-            <div class="card" id="img-react">
-                <div class="card-content">
-                    <h2 class="card-title">React</h2>
-                    <p class="card-body">I understand the basics of React, currently doing React course on Udemy 	&#128516 </p>
-                </div>
-            </div>
-            <div class="card" id="img-github">
-                <div class="card-content">
-                    <h2 class="card-title">GitHub</h2>
-                    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-            <div class="card" id="img-api">
-                <div class="card-content">
-                    <h2 class="card-title">API</h2>
-                    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-            <div class="card" id="img-rd">
-                <div class="card-content">
-                    <h2 class="card-title">Responsive Design</h2>
-                    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-            <div class="card" id="img-ps">
-                <div class="card-content">
-                    <h2 class="card-title">Photo Shop</h2>
-                    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-            </div>
-        </div>
         
-        
-
-
-    </section>
-        
-        
-    <section id="contacts" >
-        
-        <h3  class="greyOverText homepageBtn"  onClick="history.go(0)">Back to HomePage</h3>
-        <h1 id="textEffect3">let's make <br> something great!</h1>
-        <h2>feel free to contact me bellow</h2>
-        <div class="info-phone">
-            <img src="phone.svg" class="phone-icon">
-            <p class="info-phone-p">065/33-111-46</p>
-        </div>
-        <div class="info-mail">
-            <img src="mail.svg" class="mail-icon">
-            <p class="info-mail-p">luqua00@gmail.com</p>
-        </div>
-    </section>
-    <script src="index.js"></script>
-</body>
-</html>
        
         
     

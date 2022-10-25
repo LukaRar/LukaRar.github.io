@@ -1,12 +1,8 @@
 const hello= document.getElementById("hello")
 const iam= document.getElementById("iam")
 const luka= document.getElementById("luka")
-const aboutMe = document.getElementById("aboutMe")
-const skills = document.getElementById("skills")
-const contacts = document.getElementById("contacts")
-const textEffect1 = document.getElementById("textEffect1")
-const textEffect2 = document.getElementById("textEffect2")
-const textEffect3 = document.getElementById("textEffect3")
+
+
 
 
 hello.addEventListener("mouseover", mouseOver1);
@@ -19,13 +15,13 @@ luka.addEventListener("mouseover", mouseOver3);
 luka.addEventListener("mouseout", mouseOut3);
 
 function mouseOver1() {
-    hello.innerHTML = "About"
+    hello.innerHTML = "Skills"
   }
   function mouseOut1() {
     hello.innerHTML = "Hello."
   }
   function mouseOver2() {
-    iam.innerHTML = "Skills"
+    iam.innerHTML = "About"
   }
   function mouseOut2() {
     iam.innerHTML = "I am"
@@ -37,27 +33,40 @@ function mouseOver1() {
     luka.innerHTML = "Luka"
   }
   
-  hello.addEventListener("click", ()=> {
-    aboutMe.style.zIndex = "1";
-    textEffect1.classList.toggle("textPopUp");
-    aboutMe.style.overflow = "scroll";
-  })
+
+  const observer1 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const effect1 = entry.target.querySelector(".skills");
   
-  iam.addEventListener("click", ()=> {
-    skills.style.zIndex = "1";
-    textEffect2.classList.toggle("textPopUp");
-    skills.style.overflow = "scroll";
-  })
-
-  const body = document.getElementsByTagName("body")[0]
+      if (entry.isIntersecting) {
+        effect1.classList.add("animation");
+      return;
+      } 
   
-  luka.addEventListener("click", ()=> {
-    contacts.style.zIndex = "1";
-    textEffect3.classList.toggle("textPopUp");
-    
-  })
+     
+      effect1.classList.remove("animation");
+    });
+  });
+  
+  observer1.observe(document.querySelector('.skills-div'));
 
 
+  
+  const observer2 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const effect2 = entry.target.querySelector(".aboutMe-h1");
+  
+      if (entry.isIntersecting) {
+        effect2.classList.add("animation");
+      return; 
+      } 
+  
+     
+      effect2.classList.remove("animation");
+    });
+  });
+  
+  observer2.observe(document.querySelector('.container-aboutMe'));
 
  
 
