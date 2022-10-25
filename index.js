@@ -48,11 +48,13 @@ function mouseOver1() {
     textEffect2.classList.toggle("textPopUp");
     skills.style.overflow = "scroll";
   })
+
+  const body = document.getElementsByTagName("body")[0]
   
   luka.addEventListener("click", ()=> {
     contacts.style.zIndex = "1";
     textEffect3.classList.toggle("textPopUp");
-    contacts.style.overflow = "scroll";
+    
   })
 
 
