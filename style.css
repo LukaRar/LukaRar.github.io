@@ -11,10 +11,11 @@ header {
   margin-top: 1em;
 }
 /* -----------zoom in of the image-------------------- */
-.main--img {
+.main-page__img {
   animation: zoom 1s;
   object-fit: cover;
   margin-bottom: 50px;
+  height: 100vh;
   width: 100%;
   left: 0;
   right: 0;
@@ -34,6 +35,29 @@ header {
   position: relative;
   font-size: 1.5em;
   font-weight: bold;
+  height: 100vh;
+}
+@media (max-width: 1024px) {
+  .main-page {
+    font-size: 1em;
+  }
+  .header {
+    padding-left: 10%;
+  }
+}
+@media (max-width: 600px) {
+  .main-page {
+    font-size: 0.5em;
+  }
+  .header-text {
+    right: 5%;
+  }
+  .main-page__img {
+    object-position: right;
+  }
+  .header {
+    padding-right: 10%;
+  }
 }
 #hello {
   color: rgb(255, 255, 255);
@@ -126,14 +150,16 @@ header {
   }
 }
 #aboutMe h2 {
-  margin-left: 7em;
   font-size: 3em;
+  margin: auto;
+  max-width: 80vw;
 }
 .aboutMe-p {
   text-align: left;
   font-size: 1.75em;
-  padding-left: 12em;
-  padding-right: 12em;
+  max-width: 80vw;
+  margin: auto;
+  padding: 20px;
 }
 
 a:link,
@@ -151,10 +177,8 @@ a:hover {
 /* ------------------CONTACTS page styling-------------------- */
 #contacts h1 {
   font-size: 6em;
-  margin-left: 4em;
 }
 #contacts h2 {
-  margin-left: 12em;
   font-size: 2em;
   margin-top: 3em;
   margin-bottom: 2em;
@@ -163,7 +187,6 @@ a:hover {
 .phone-icon {
   width: 50px;
   height: 50px;
-  margin-left: 30em;
 }
 .info-phone {
   display: flex;
@@ -177,7 +200,6 @@ a:hover {
 .mail-icon {
   width: 50px;
   height: 50px;
-  margin-left: 30em;
 }
 .info-mail {
   display: flex;
@@ -198,6 +220,8 @@ a:hover {
 .contacts-div {
   position: absolute;
   top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* -------SKILLS page styling--------------------- */
@@ -239,7 +263,7 @@ li {
   margin: 0px 0 1px 0;
   height: 1em !important;
   padding: 0px 0 0px 0;
-  font-size: 3em;
+  font-size: 6rem;
   text-transform: uppercase;
   width: 100%;
 }
@@ -276,31 +300,18 @@ li {
 
 /* -----------SKILLS cards styles----------------------- */
 
-@media (min-width: 40em) {
-  .card-main {
+.card-main {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 25%));
     align-items: center;
+    grid-gap: 40px;
     min-height: 50vh;
     line-height: 1.2;
-    padding-bottom: 30px;
+    padding: 0 40px 30px;
   }
-}
-/* @media (min-width: 42em) {
-    .card-main {
-      display: grid;
-      grid-template-columns:50% 50%;
-      align-items: center;
-      min-height: 50vh;
-      line-height: 1.2;
-      padding-bottom: 30px;
-    }
-  } */
 .card {
   color: rgb(255, 255, 255);
   background-size: cover;
-  margin: 40px;
-  width: 300px;
   height: 300px;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -328,6 +339,7 @@ li {
   opacity: 1;
   transition-delay: 1000ms;
 }
+
 .card-title {
   position: relative;
   width: max-content;
@@ -372,4 +384,72 @@ li {
 }
 #img-api {
   background-image: url("api1.jpg");
+}
+@media (max-width: 1024px) {
+  .card {
+    transform: scale(1.05);
+  }
+  .card .card-content {
+    transform: translateY(58%);
+    transition-delay: 500ms;
+  }
+  .card-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+  .card .card-content > *:not(.card-title) {
+    opacity: 1;
+    transition-delay: 1000ms;
+  }
+  .skills {
+    margin-left: 2rem;
+  }
+  .contacts-div {
+    top: 150px;
+  }
+  #contacts h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  #contacts h2 {
+    font-size: 2rem;
+    margin: 10px;
+  }
+  .info-mail-p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .info-phone-p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .phone-icon, .mail-icon {
+    height: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .skills-div {
+    padding-left: 20px;
+  }
+  .skills {
+    margin-left: 0rem;
+  }
+  #aboutMe h1 {
+    margin-left: 0;
+    padding: 20px;
+    font-size: 4rem;
+  }
+  .aboutMe-p {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  .aboutMe-h2 {
+    max-width: 600px;
+    margin-left: 0;
+    margin: auto;
+  }
+  .contacts-div {
+    top: 100px;
+  }
 }
